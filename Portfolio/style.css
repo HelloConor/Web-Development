@@ -1,0 +1,348 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+html,body {
+    margin:0;
+    padding:0;    
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    
+    
+}
+
+.upperbody{
+    box-sizing: border-box;    
+    /* remove below when horizontal overflow has a fix */
+    overflow-x: hidden;
+    height: 850px; 
+    margin:0;
+    padding:0; 
+       
+}
+
+
+#mybackgroundvideo{    
+    min-width: 100%; 
+    min-height: 100%; 
+    width: auto;    
+    height: 125vh;
+    overflow:hidden;
+    /* absolute and z-index makes video layer under other elements */
+    position:absolute;       
+    z-index: -1;
+    /* centers the video */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    /* margin top here reduces the vertical size of the background video */     
+    margin-top: -200px;
+    
+}
+
+      
+
+
+li, a, button,.ConorName {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #edf0f1;
+    text-decoration: none;
+    
+}
+
+header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 30px 10%;
+    
+}
+
+.ConorName{
+    cursor: pointer;
+    margin-right: auto;
+    
+}
+
+
+
+.nav__links {
+    list-style: none;
+    
+    
+}
+.nav__links li{
+    display: inline-block;
+    padding: 0px 20px;
+}
+.nav__links li a {
+    transition: all 0.3 ease 0s;
+}
+
+.nav__links li a:hover {
+    color: #0088a9
+}
+
+button {
+    margin-left: 20px;
+    padding: 9px 25px;
+    background-color: rgba(0,136,169,1);
+    border: none;
+    /* radius rounds the rectangle to make circular */
+    border-radius: 60px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+/* this makes the layered effect on the contact button */
+button::after, .button::before {
+    content:"";
+    position: absolute;
+    opacity: 0.3;
+    background-color: rgb(192, 17, 140);
+    border-radius: inherit;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: transform 0.3s ease;
+
+    
+}
+
+button:hover {
+    transform: translate(-12px, -12px);
+}
+
+button:hover::after {
+    transform: translate(6px, 6px);
+}
+
+button:hover::before {
+    transform: translate(12px, 12px);
+}
+
+.profile-card {
+    display:flex;
+    align-items: center;
+    justify-content: center;    
+    text-align: center;    
+    width: auto;
+    font-family: "Montserrat", sans-serif;
+    margin-top: 120px;
+    margin-right: 500px;
+    border-radius: 30px
+    
+    
+}
+
+.card-header{
+    background:#2c3a47;
+    padding: 70px 50px;
+    border-radius: 30px
+        
+}
+
+.ConorPicture{
+    display:inline-block;
+    padding: 3px;
+    background: linear-gradient(130deg, #ff5f6d, #ffc371);
+    margin: auto;
+    border-radius: 50%;
+    animation: animated-gradient 2s linear infinite;
+    overflow:visible;
+    
+}
+
+.ConorPicture img{
+    display:block;
+    width: 150px;
+    height: 150px;    
+    border-radius: 50%;
+    
+    
+}
+
+.ProfileName {
+    color: #f2f2f2;
+    font-size: 28px;
+    font-weight: 600px;
+    margin: 10px 0;
+    background:#2c3a47; 
+    
+    
+}
+
+.ConorDesc {
+    color: #f2f2f2;
+    font-size: 18px;
+    background:#2c3a47; 
+    
+       
+}
+
+.SocialMedias {
+    display:flex;
+    justify-content: center;
+    margin: 20px 0;
+    background:#2c3a47; 
+    
+}
+.SocialMedias a {
+    color: #f2f2f2;
+    width: 56px;
+    background:#2c3a47; 
+}
+
+.CV-btn {
+    background:#2c3a47; 
+}
+
+.ConorIntroduction {
+    display:grid;
+    align-items: center;
+    justify-content: center;    
+    text-align: center;    
+    font-family: "Montserrat", sans-serif;
+    border:#0088a9; 
+    margin-top: -375px;
+    margin-right: -500px;    
+}
+
+.card-desc{
+    background:#2c3a47;
+    padding:70px 20px;
+    overflow: wrap;
+    width: 500px;
+    height: 150px;
+    border-radius: 30px  
+}
+
+.ConorTalking {
+    background:#2c3a47;
+    color: #f2f2f2;
+    font-size: 20px;
+    
+}
+
+.ProjectContainer {    
+    margin-top: 0px;
+    padding: 0px;
+    font-family: "Montserrat", sans-serif; 
+    
+}
+
+.Projects {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.ContainerTitle{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+    margin: 10px;    
+    font-family: "Montserrat", sans-serif;    
+    font-size: 30px;
+}
+    
+.Project1 {
+    
+    margin-top: auto;
+    background-color: #dbdbdb;
+    width: 350px;
+    height: 400px;
+    margin: 40px;
+    object-fit:cover;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);     
+}
+.project:hover{
+    transform: translate(-12px, -12px);
+}
+
+.explanation1{
+    color: grey;
+    font-style: italic;
+}
+
+
+
+
+.Project2 {
+    
+    margin-top: auto;
+    background-color: #dbdbdb;
+    width: 350px;
+    height: 400px;
+    margin: 40px;
+    object-fit:cover;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);    
+    
+    
+}
+.Project3 {
+    
+    margin-top: auto;
+    background-color: #dbdbdb;
+    width: 350px;
+    height: 400px;
+    margin: 40px;
+    object-fit:cover;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);    
+    
+    
+}
+
+/* Below is css for the contact form */
+
+.contactcontainer{
+    width: 100%;
+    height: 90vh;
+    background-color: rgb(194, 194, 194);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px;
+    
+    
+  }
+  
+  form{
+    background: #2c3a47;
+    display:flex;
+    flex-direction: column;
+    padding: 2vw 4vw;
+    width:90%;
+    max-width:600px;
+    border-radius:10px;
+  }
+  
+  form h3{
+    color: #f2f2f2;
+    font-weight: 800;
+    margin-bottom: 20px;
+    font-family: "Montserrat", sans-serif; 
+  }
+  
+  form input, form textarea{
+    border: 0;
+    margin: 10px 0;
+    padding: 20px;
+    outline: none;
+    background: #f5f5f5;
+    font-size: 16px;
+  }
+  
+  form button{
+    padding: 15px;
+    background: #ff5361;
+    color: #fff;
+    font-size: 18px;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    width: 150px;
+    margin: 20px auto 0;
+    border-radius: 30px;
+  }

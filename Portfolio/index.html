@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <title>Navbar</title>
+</head>
+<body>
+    <video autoplay muted loop id="mybackgroundvideo">
+        <source src="backgroundvideo.mp4" type="video/mp4">
+    </video>
+    
+    <div class="upperbody" id="#homelink">
+
+        <header>
+            <!-- may add name back not sure -->
+            <p class="ConorName"></p>
+            <nav>
+                <ul class ="nav__links">
+                    <li><a href="#homelink">Home</a></li>
+                    <li><a href="#projectlink">Projects</a></li>                    
+                </ul>
+            </nav>
+            <a class="cta" href="#contactsection"><button>Contact</button></a>
+        </header>
+        
+
+        
+        
+            <div class="profile-card">
+                <div class="card-header">
+                    <div class="ConorPicture">
+                        <img src="ConorFaceThree.PNG" alt="A picture of me in Rome">
+                    </div>
+                    <div class ="ProfileName">Conor MacGregor</div>
+                    <div class="ConorDesc">Beginner Developer</div>
+                    <div class="SocialMedias">
+                        <a href="#" class="fab fa-linkedin"></a>
+                        <a href="#" class="fab fa-github"></a>
+                        <a href="#" class="fab fa-twitter"></a>                
+                    </div>
+                    <a href="#" download="C:\Personal\Misc\Conor MacGregor-CV.doc" class="CV-btn">Download Resumé</a>      
+                </div>
+            </div>
+
+            <div class="ConorIntroduction">
+                <div class="card-desc">            
+                    <div class="ConorTalking">Hi, <br><br>
+                        I am self taught Web Developer based in the North West of England seeking any and all opportunities to develop further.
+                    </div>
+                </div>
+            </div>
+    </div>
+    <div class="ContainerTitle">Here is some of my work:</div>    
+    <div class="ProjectContainer">
+        <div class ="Projects" id="projectlink">
+            
+            <div class="Project1">
+                <div class="project1img">
+                    <img src="project1.png" alt="a screenshot of project 1 home page" height="200" width="350">
+                </div>                
+                <h2>My Book Collection</h2>
+                <div class="explanation1">A ranking of Authors & Books I enjoy</div>
+                <br>
+                <!--Add HTML, CSS< & JS symbols here-->
+                <p><a href="\Book Review\index.html" target="_blank"><button class="projectbutton">Click to view</button></p></a>                
+                
+            </div>
+            <div class="Project2"></div>
+            <div class="Project3"></div>        
+        </div>
+    </div>
+
+    <div class="contactcontainer" id="contactsection">
+        <form action="https://formspree.io/f/mrgjjdkj" method="POST" target="_blank">
+            <h3>GET IN TOUCH</h3>
+            <input type="text" id="name" name="name" placeholder="Name" required>
+            <input type="email" id="email" name = "email" placeholder="Email Address" required>
+            <input type="text" id="phone" name="phone" placeholder="Phone no." required>
+            <textarea id="message" rows="4" name = "message" placeholder="Want to offer some feedback, or just to talk? I'm always happy to respond to your message."></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </div>
+
+</body>
+</html>
