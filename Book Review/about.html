@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Reviews</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+    <section>
+        <div class="navbar">
+            <ul class="navbar">
+                <li class="navbar-li"><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn">Favourite Authors</a>
+                    <div class="dropdown-content">
+                      <a href="Authors/Orwell.html">George Orwell</a>
+                      <a href="Authors/Murakami.html">Haruki Murakami</a>
+                      <a href="Authors/Alexievich.html">Svetlana Alexievich</a>
+                <li><a href="geography.html">Country of Origin</a></li>
+                <li><a href="future.html">Future Reads</a></li>
+                <li style="float:right"><a class="active" href="#about">About</a></li>
+            </ul>
+        </div>
+    </section>
+    <section>
+        <p>Collapsible Set:</p>
+        <button class="collapsible">Purpose of this website</button>
+        <div class="content">
+          <p>This is the first website I have worked on, I like to read so I thought this would be a good starting point. I started off with very simple HTML & CSS work. I have learned this mostly by thinking of ideas for the page, and the googling tutorials which explain how to go about doing that. I found that beginner friendly StackOverflow questions & w3schools.com to explain this very well.</p>          
+          <p>Over time I started to introduce beginner Javascript projects into this website. I found Javascript to be much more abstract than HTML & CSS so I knew I had to keep it simple and with great documentation so I can read through it to remind me. I found Youtube & StackOverflow to be great resources on how to learn Javascript and how I can implement it into this website.</p>
+        </div>
+        <button class="collapsible">'Home' Breakdown</button>
+        <div class="content">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+        <button class="collapsible">'Favourite Authors' Breakdown</button>
+        <div class="content">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+        <button class="collapsible">'Country of Origin' Breakdown</button>
+        <div class="content">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+        <button class="collapsible">'Future Reads' Breakdown</button>
+        <div class="content">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+    </section>
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  });
+}
+</script>
+</body>
+</html>

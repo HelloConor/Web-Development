@@ -1,0 +1,195 @@
+html {
+  overflow: auto;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  /*
+  background-image: url(Images/background_bokos.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  */
+}
+
+.navbar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333; 
+  position: fixed;
+  top: 0;
+  left: 0px;
+  width:100%;
+}
+.dropdown-content {
+  display: none;
+  position: fixed;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+li {
+    float: left;
+}
+
+li a, .dropbtn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+li a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
+}
+
+ li.dropdown {
+  display: inline-block;
+}
+
+
+
+.dropdown-content a {
+  color: rgb(0, 0, 0);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1;}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.active {
+    background-color: #04AA6D;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  
+}
+
+::-webkit-scrollbar-track {
+  background-color: #ebebeb;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background: #6d6d6d; 
+}
+
+/* 
+Below is CSS for the slideshow
+*/
+
+* {box-sizing:border-box}
+
+/* slide show container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+/* hide images by default */
+.mySlides {
+  display: none;
+
+}
+
+.mySlides{
+  text-align: center;
+  padding:50px
+}
+
+/* Next and previous buttons */
+.prev, .next{
+  /* this add cursor pointer when hovered over button */
+  cursor:pointer;
+  position: absolute;
+  top:50%; 
+  margin-top: -22px;
+  padding: 16px;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  font-size: 18px;
+  /* this transition moves the button side to side when loaded */
+  transition: 0.6s ease;  
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the 'next button' to the right */
+.next {
+  left: 1300px;
+  
+  border-radius: 0 3px 3px 0;
+}
+.prev {
+  right:1300px;
+  
+  border-radius: 0 3px 3px 0;
+}
+/* On hover, add a black backgrond color with a little bit see-through */
+.prev:hover, .next:hover{
+  background-color: rgba(114, 114, 114, 0.8);
+}
+/* Caption text */
+.futuretext{
+  color:#000000;
+  font-size:25px;
+  padding:10px 12px;
+  
+  bottom: 200px;
+  width:100%;
+  text-align: center;
+}
+/* Number text (1/6) */
+.numbertext {
+  color: #050505;
+  font-size: 16px;
+  padding:10px 15px;
+  top:30;
+  left:40;
+}
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width:15px;  
+  margin: 0 2px;
+  background-color: #bbb;;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+  position: relative;
+  top: -60px;
+}
+
+.active, .dot:hover {
+  background-color: #04AA6D;
+}
+
+/* fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px} 
+}

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Country of Origin</title>
+    <link rel="stylesheet" href="geography.css">
+</head>
+<body>
+    <div class="navbar">
+        <ul class="navbar">
+            <li class="navbar-li"><a href="index.html">Home</a></li>
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">Favourite Authors</a>
+                <div class="dropdown-content">
+                  <a href="Authors/Orwell.html">George Orwell</a>
+                  <a href="Authors/Murakami.html">Haruki Murakami</a>
+                  <a href="Authors/Alexievich.html">Svetlana Alexievich</a>
+            <li><a href="geography.html">Country of Origin</a></li>
+            <li><a href="future.html">Future Reads</a></li>
+            <li style="float:right"><a class="active" href="#about">About</a></li>
+        </ul>
+    </div>
+    <div class ="bookcountries">
+        <h1 class ="geographytitle">Country of Origin</h1>
+        <p class="headertext">Where the books I read come from.</p>
+        <div class='tableauPlaceholder' id='viz1652962085002' style='position: relative'><noscript><a href='#'><img alt='Sheet 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Bo&#47;BookOriginWorldMap&#47;Sheet1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='BookOriginWorldMap&#47;Sheet1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Bo&#47;BookOriginWorldMap&#47;Sheet1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-GB' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1652962085002');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+ 
+            <figcaption id="worldmapcaption">
+                The greener the country, the more i've read from.
+            </figcaption>
+        </figure>        
+    </div>
+    <div class="countryexplanation">
+        <p>Most books I've read are from the United Kingdom, then the United States. There is a clear Anglo-American interest of Authors</p>
+        <p>Japan is then the third largest contributor, mostly due to Murakami's works</p>
+        <p>Please see the complete table breakdown below.</p>
+    </div>
+    <p id="tabletitle">Book Breakdown:</p>
+    <div class="bookorigintable">
+        <table id="countrytable">
+            <tr  class="bg-info">
+                <th  class="bg-info" data-colname="name" data-order="descname">Name &#9650</th>
+                <th  data-coltitle="title" data-order="desctitle">Title &#9650</th>
+                <th  data-colgenre="genre" data-order="descgenre">Genre &#9650</th>
+                <th  data-colrating="rating" data-order="descrating">Rating 0-5 &#9650</th>
+                <th  data-colcountry="country" data-order="desccountry">Country &#9650</th>
+            </tr>
+            <tbody id="myTable">
+        
+            </tbody>
+        </table>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+    var myArray = [
+        {'name':'Alexievich, S', 'title':'The Unwomanly Face of War', 'genre': 'Biography', 'rating':'5', "country": "Belarus"},
+        {'name':'Alexievich, S', 'title':'Chernobyl Prayer', 'genre': 'Biography', 'rating':'5', "country": "Belarus"},
+        {'name':'Barrister, S', 'title':"The Secret Barrister: Stories of the Law and How It's Broken", 'genre': 'Autobiography', 'rating':'5', "country": "United Kingdom"},
+        {'name':'Barrister, S', 'title':"Fake Law: The Truth About Justice in an Age of Lies", 'genre': 'Autobiography', 'rating':'4', "country": "United Kingdom"},
+        {'name':'Bradbury, R', 'title': 'Farenheit 451', 'genre': 'Dystopian', 'rating':'4', "country": "United States"},
+        {'name':'Defoe, D', 'title':"Robinson Cruseo", 'genre': 'Adventure Fiction', 'rating':'3', "country": "United Kingdom"},
+        {'name':'Dick, P', 'title':"The Man in The High Castle", 'genre': 'Alternate History', 'rating':'3', "country": "United States"},
+        {'name':'Dickens, C', 'title':"A Tale of Two Cities", 'genre': 'Historical Fiction', 'rating':'4', "country": "United Kingdom"},
+        {'name':'Doyle, A.C', 'title':"The Hound of Baskervilles", 'genre': 'Mystery', 'rating':'4', "country": "United Kingdom"},
+        {'name':'Dronfield, J', 'title':"The Boy Who Followed His Father Into Auschwitz", 'genre': 'Biography', 'rating':'5', "country": "United Kingdom"},
+        {'name':'Fitzgerald, F.S', 'title':"The Great Gatsby", 'genre': 'Historical Fiction', 'rating':'4', "country": "United States"},
+        {'name':'Gombrich, E', 'title':"A Little History Of The World", 'genre': 'History', 'rating':'5', "country": "Austria"},
+        {'name':'Herbet, F', 'title':"Dune", 'genre': 'Science Fiction', 'rating':'5', "country": "United States"},
+        {'name':'Hosseini, K', 'title':"The Kite Runner", 'genre': 'Bildungsroman', 'rating':'4', "country": "United States"},
+        {'name':'Huxley, A', 'title':"Brave New World", 'genre': 'Dystopian', 'rating':'5', "country": "United Kingdom"},
+        {'name':'Joyce, J', 'title':"Dubliners", 'genre': 'Short-story', 'rating':'4', "country": "Ireland"},
+        {'name':'Kafka, F', 'title':"The Trial", 'genre': 'Absurdist Fiction', 'rating':'3', "country": "Germany"},
+        {'name':'Karski, J', 'title':"Story of a Secret State", 'genre': 'Autobiography', 'rating':'4', "country": "Poland"},
+        {'name':'Lovecraft, H.P', 'title':"At The Mountain of Madness", 'genre': 'Horror', 'rating':'2', "country": "United States"},
+        {'name':'Macintyre, B', 'title':"The Spy and the Traitor", 'genre': 'Biography', 'rating':'5', "country": "United Kingdom"},
+        {'name':'Márquez, G', 'title':"One Hundred Years of Solitude", 'genre': 'Magic Realism', 'rating':'4', "country": "Colombia"},
+        {'name':'Murakami, H', 'title':"Sputnik Sweetheart", 'genre': 'Novel', 'rating':'4', "country": "Japan"},
+        {'name':'Murakami, H', 'title':"After the Quake", 'genre': 'Short-story', 'rating':'4', "country": "Japan"},
+        {'name':'Murakami, H', 'title':"Norweigan Wood", 'genre': 'Bildungsroman', 'rating':'5', "country": "Japan"},
+        {'name':"O'Farrel, G", 'title':"Hamnet", 'genre': 'Historical Fiction', 'rating':'2', "country": "United Kingdom"},
+        {'name':"Orwell, G", 'title':"1984", 'genre': 'Dystopian', 'rating':'5', "country": "United Kingdom"},
+        {'name':"Orwell, G", 'title':"Down Out In Paris and London ", 'genre': 'Autobiography', 'rating':'4', "country": "United Kingdom"},
+        {'name':"Orwell, G", 'title':"The Road to Wigan Pier", 'genre': 'Autobiography', 'rating':'5', "country": "United Kingdom"},
+        {'name':"Orwell, G", 'title':"Homage to Catalonia", 'genre': 'Autobiography', 'rating':'3', "country": "United Kingdom"},
+        {'name':"Orwell, G", 'title':"Animal Farm", 'genre': 'Allegory', 'rating':'5', "country": "United Kingdom"},
+        {'name':"Peterson, J", 'title':"12 Rules for Life", 'genre': 'Self-help', 'rating':'3', "country": "Canada"},
+        {'name':"Shepherd, R", 'title':"Unnatural Causes", 'genre': 'Autobiography', 'rating':'5', "country": "United Kingdom"},
+        {'name':"Stevenson, R", 'title':"Treasure Island", 'genre': 'Adventure', 'rating':'4', "country": "United Kingdom"},
+        {'name':"Tolkein, J.R.R", 'title':"The Fellowship of the Ring", 'genre': 'Fantasy', 'rating':'5', "country": "United Kingdom"},
+        {'name':"Tootle, J.K", 'title':"A Confederacy of Dunces", 'genre': 'Comedy', 'rating':'3', "country": "United States"},
+        {'name':"Wells, H.G", 'title':"The War of the Worlds", 'genre': 'Science Fiction', 'rating':'3', "country": "United Kingdom"},
+        {'name':"Wilde, O", 'title':"The Picture of Dorian Gray", 'genre': 'Philosophical Novel', 'rating':'4', "country": "United Kingdom"},
+        {'name':"Williams, J", 'title':"Stoner", 'genre': 'Psychological Fiction', 'rating':'5', "country": "United States"},
+    ]
+
+
+    buildTable(myArray)
+
+
+
+    $('th').on('click', function(){
+        var column = $(this).data('colname')
+        var columntitle = $(this).data('coltitle')
+        var columngenre = $(this).data('colgenre')
+        var columnrating = $(this).data('colrating')
+        var columncountry = $(this).data('colcountry')
+
+        var order = $(this).data('order')
+        var ordertitle = $(this).data('ordertitle')
+        var ordergenre =$(this).data('ordergenre')
+        var text = $(this).html()
+        text = text.substring(0, text.length - 1);
+        
+        
+        
+        if (order == 'descname'){
+            myArray = myArray.sort((a, b) => a[column] > b[column] ? 1 : -1)
+            $(this).data("order","ascname");
+            text += '&#9660'}
+
+        else if(order == 'desctitle'){
+            myArray = myArray.sort((a, b) => a[columntitle] > b[columntitle] ? 1 : -1)
+            $(this).data("ordertitle","asctitle");
+            text += '&#9660'}
+        
+        else if(order == 'descgenre'){
+            myArray = myArray.sort((a, b) => a[columngenre] > b[columngenre] ? 1 : -1)
+            $(this).data("ordergenre","ascgenre");
+            text += '&#9660'}
+        
+        else if(order == 'descrating'){
+            myArray = myArray.sort((a, b) => a[columnrating] < b[columnrating] ? 1 : -1)
+            $(this).data("ordertaing","ascrating");
+            text += '&#9660'} 
+        
+        else if(order == 'desccountry'){
+            myArray = myArray.sort((a, b) => a[columncountry] > b[columncountry] ? 1 : -1)
+            $(this).data("ordercountry","asccountry");
+            text += '&#9660' 
+
+        
+        }else{
+            myArray = myArray.sort((a, b) => a[column] < b[column] ? 1 : -1)
+            $(this).data("order","descname");
+            text += '&#9650'
+        }
+
+        $(this).html(text)
+        buildTable(myArray)
+        })
+
+
+    
+    
+        
+    function buildTable(data){
+        var table = document.getElementById('myTable')
+        table.innerHTML = ''
+        for (var i = 0; i < data.length; i++){
+            var colname = `name-${i}`
+            var coltitle = `title-${i}`
+            var colgenre = `genre-${i}`
+            var colrating = `rating-${i}`
+            var colcountry = `country-${i}`
+
+            var row = `<tr>
+                            <td>${data[i].name}</td>
+                            <td>${data[i].title}</td>
+                            <td>${data[i].genre}</td>
+                            <td>${data[i].rating}</td>
+                            <td>${data[i].country}</td>
+                    </tr>`
+            table.innerHTML += row
+        }
+    }
+
+    </script>
+</body>
+</html>
